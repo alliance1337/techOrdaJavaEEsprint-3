@@ -14,7 +14,6 @@
   <div class="row">
     <div class="col-12 mx-auto">
       <h1>Welcome Back <%=currentUser!=null?currentUser.getFullName():""%></h1>
-
       <form action="/update-profile" method="POST">
         <div class="form-floating mb-3">
           <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">

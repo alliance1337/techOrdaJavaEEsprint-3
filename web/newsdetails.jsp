@@ -32,7 +32,7 @@
         </strong>
         </p>
         <%
-          if (currentUser.getRole() == 1) {
+          if (currentUser != null && currentUser.getRole() == 1) {
         %>
         <div>
           <!-- Button trigger modal -->

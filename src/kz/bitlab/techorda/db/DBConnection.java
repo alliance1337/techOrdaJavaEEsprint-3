@@ -266,7 +266,7 @@ public class DBConnection {
                     "WHERE id = ?");
 
             statement.setString(1, user.getFullName());
-            statement.setString(2, user.getEmail());
+            statement.setString(2, user.getPassword());
             statement.setLong(3, user.getId());
 
             statement.executeUpdate();
@@ -277,11 +277,12 @@ public class DBConnection {
         }
     }
 
+
     public static User getUserById(Long id) {
         User users = null;
         try {
             PreparedStatement statement = connection.prepareStatement("" +
-                    "SELECT n.full_name, n.password " +
+                    "SELECT n.id, n.full_name, n.password " +
                     "FROM tech_orda_db.users n " +
                     "where n.id = ? ");
 
@@ -291,6 +292,7 @@ public class DBConnection {
             if (resultSet.next()) {
 
                 users = new User();
+                users.setId(resultSet.getLong("id"));
                 users.setFullName(resultSet.getString("full_name"));
                 users.setPassword(resultSet.getString("password"));
 

@@ -1,9 +1,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="java.util.ArrayList" %>
 <%@ page import="kz.bitlab.techorda.db.News" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="java.util.ArrayList" %>
+<%@ page import="kz.bitlab.techorda.db.Comment" %>
 
 <html>
 <head>
@@ -22,4 +20,3 @@
 </div>
 </body>
 </html>
-

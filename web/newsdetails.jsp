@@ -1,10 +1,7 @@
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="kz.bitlab.techorda.db.Book" %>
 <%@ page import="kz.bitlab.techorda.db.News" %>
 <%@ page import="kz.bitlab.techorda.db.Comment" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="kz.bitlab.techorda.db.Book" %>
-<%@ page import="kz.bitlab.techorda.db.Author" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>

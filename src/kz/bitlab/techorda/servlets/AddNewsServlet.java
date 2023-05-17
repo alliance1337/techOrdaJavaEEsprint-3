@@ -5,9 +5,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import kz.bitlab.techorda.db.Author;
-import kz.bitlab.techorda.db.Book;
-import kz.bitlab.techorda.db.DBConnection;
 import kz.bitlab.techorda.db.User;
 
 import java.io.IOException;

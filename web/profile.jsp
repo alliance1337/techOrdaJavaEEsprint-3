@@ -1,6 +1,10 @@
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="kz.bitlab.techorda.db.Book" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="kz.bitlab.techorda.db.News" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.ArrayList" %>
+
 <html>
 <head>
   <title>Title</title>
@@ -12,8 +16,10 @@
   <div class="row">
     <div class="col-12 mx-auto">
       <h1>HELLO <%=currentUser!=null?currentUser.getFullName():""%></h1>
+
     </div>
   </div>
 </div>
 </body>
 </html>
+

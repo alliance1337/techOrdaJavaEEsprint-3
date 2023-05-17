@@ -1,3 +1,4 @@
+<%@ page import="kz.bitlab.techorda.db.Author" %>
 <form action="/add-book" method="post">
   <div class="row">
     <div class="col-12">
@@ -6,7 +7,7 @@
   </div>
   <div class="row mt-2">
     <div class="col-12">
-      <input type="text" class="form-control" name = "book_name">
+      <input type="text" class="form-control" name="book_name">
     </div>
   </div>
   <div class="row mt-3">
@@ -16,7 +17,18 @@
   </div>
   <div class="row mt-2">
     <div class="col-12">
-      <input type="text" class="form-control" name = "book_author">
+      <select class="form-select" name="book_author">
+        <%
+          ArrayList<Author> authors = (ArrayList<Author>) request.getAttribute("avtory");
+          if(authors!=null){
+            for(Author author : authors){
+        %>
+        <option value="<%=author.getId()%>"><%=author.getFirstName() + " " + author.getLastName()%></option>
+        <%
+            }
+          }
+        %>
+      </select>
     </div>
   </div>
   <div class="row mt-3">
@@ -44,8 +56,7 @@
     <div class="col-12">
       <select class="form-select" name="book_price">
         <%
-          for (int i=0; i<100000;i+=1000){
-
+          for(int i = 0; i < 100000; i+=1000){
         %>
         <option><%=i%></option>
         <%

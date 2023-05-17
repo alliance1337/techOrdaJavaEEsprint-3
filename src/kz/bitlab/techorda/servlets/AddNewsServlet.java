@@ -8,28 +8,26 @@ import jakarta.servlet.http.HttpServletResponse;
 import kz.bitlab.techorda.db.Author;
 import kz.bitlab.techorda.db.Book;
 import kz.bitlab.techorda.db.DBConnection;
-import kz.bitlab.techorda.db.DBManager;
+import kz.bitlab.techorda.db.User;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
-@WebServlet("/details")
-public class DetailsServlet extends HttpServlet {
+@WebServlet(value = "/add-news-page")
+public class AddNewsServlet extends HttpServlet {
 
     @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int id = -1;
-        try {
-            id = Integer.parseInt(request.getParameter("book_id"));
-        }catch (Exception e){
 
+        User user = (User) request.getSession().getAttribute("currentUser");
+        if (user!=null) {
+            request.getRequestDispatcher("/addnews.jsp").forward(request,response);
+        }else {
+            response.sendRedirect("/login");
         }
-        Book book = DBConnection.getBook(id);
-        request.setAttribute("kniga", book);
 
-        ArrayList<Author> authors = DBConnection.getAuthors();
-        request.setAttribute("avtory", authors);
-
-        request.getRequestDispatcher("/details.jsp").forward(request,response);
     }
 }

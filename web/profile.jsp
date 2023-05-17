@@ -8,10 +8,10 @@
 </head>
 <body>
 <%@include file="navbar.jsp"%>
-<div class="container mt-5">
+<div class="container mt-3">
   <div class="row">
-    <div class="col-6 mx-auto">
-      <%@include file="addform.jsp"%>
+    <div class="col-12 mx-auto">
+      <h1>HELLO <%=currentUser!=null?currentUser.getFullName():""%></h1>
     </div>
   </div>
 </div>

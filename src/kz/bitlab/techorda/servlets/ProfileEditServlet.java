@@ -14,11 +14,5 @@ public class ProfileEditServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/profile-edit.jsp").forward(request, response);
     }
-
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String newPassword = request.getParameter("password");
-        String newFullName = request.getParameter("fullName");
-        response.sendRedirect("/profile");
-    }
 }
 

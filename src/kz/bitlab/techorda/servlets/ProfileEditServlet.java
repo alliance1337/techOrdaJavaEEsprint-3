@@ -12,7 +12,15 @@ import java.io.IOException;
 @WebServlet("/profile-edit")
 public class ProfileEditServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/profile-edit.jsp").forward(request, response);
+
+
+        User currentUser = (User) request.getSession().getAttribute("currentUser");
+        if (currentUser!=null) {
+            request.getRequestDispatcher("/profile-edit.jsp").forward(request, response);
+        }else {
+            response.sendRedirect("/login");
+        }
+
     }
 }
 

@@ -109,9 +109,8 @@
                     </div>
                     <div class="row mt-2">
                       <div class="col-12">
-                        <textarea class="form-control" name="content" placeholder="Insert content:" required rows="10">
-                          <%=news.getContent()%>
-                        </textarea>
+                        <textarea class="form-control" name="content"
+                                  placeholder="Insert content:" required rows="10"><%=news.getContent()%></textarea>
                       </div>
                     </div>
                   </div>

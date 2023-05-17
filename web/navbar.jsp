@@ -4,7 +4,7 @@
 <div class="container">
   <nav class="navbar navbar-expand-lg bg-success navbar-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand" href="/news">
         <%=siteName%>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,10 +13,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/authors">Authors</a>
+            <a class="nav-link" href="/news">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/news">All News</a>
@@ -27,15 +24,13 @@
           <%
             if(currentUser.getRole()==1){
           %>
+
           <li class="nav-item">
-            <a class="nav-link" href="/add-book-page">Add Book</a>
+            <a class="nav-link" href="/add-news-page">Add News</a>
           </li>
           <%
             }
           %>
-          <li class="nav-item">
-            <a class="nav-link" href="/add-news-page">Add News</a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <%=currentUser.getFullName()%>

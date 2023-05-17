@@ -2,6 +2,9 @@
 <%@ page import="kz.bitlab.techorda.db.Book" %>
 <%@ page import="kz.bitlab.techorda.db.News" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="kz.bitlab.techorda.db.Book" %>
+<%@ page import="kz.bitlab.techorda.db.Author" %>
 <html>
 <head>
   <title>Title</title>

@@ -8,6 +8,7 @@
 </head>
 <body>
 <%@include file="navbar.jsp"%>
+
 <div class="container mt-3">
   <div class="row">
     <h4 class="text-center">
